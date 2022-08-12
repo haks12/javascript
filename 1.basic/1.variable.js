@@ -12,5 +12,5 @@ let $user
 let userName
 let user_name
 
-const x = 1//const는 상수, 
+const x = 1//const는 상수, (초기화값 선언해줘야함)
 x = 2

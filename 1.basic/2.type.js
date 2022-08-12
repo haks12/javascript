@@ -1,12 +1,14 @@
-let foo="I am a string."
+//string type ", ' 둘다가능
+let foo = "I am string."
 foo = 'So am I'
-foo = 'back tick'
+foo = `back tick`
 
+//number type
 foo = 1
 foo = 1.0
 
 console.log(1 / 0)
-console.log('a' / 1) //Nan(Not a Number)
+console.log('a' / 1) // NaN(Not a Number)
 
 foo = 1
 console.log(isFinite(foo))
@@ -19,7 +21,7 @@ console.log(parseInt(foo) + 1)
 foo = 'a'
 foo = '100px'
 foo = '+1'
-foo = '-1'
+//-은 구분자로 사용됨
 foo = '123456-789123'
 console.log(parseInt(foo))
 
@@ -34,13 +36,16 @@ console.log(a, b)
 a = Infinity * NaN
 console.log(a)
 
+//16자리를 초과하면 n을 표기한다
 foo = 1n
 
+//boolean type
 const okay = true
 const fail = false
 
 let val = null
 
+//undefined
 let val2
 val2 = undefined
 console.log(val2)
@@ -55,16 +60,19 @@ console.log(typeof val)
 val = '6' / '2'
 console.log(val)
 
-val = false / true // 0 나누기 1
+val = false / true
 console.log(val)
 
 val = '1'
 val = Number(val)
-console.log(typeof val) //typeof 는 string
+console.log(typeof val)
 
-console.log(Number('1'), Number(true)) //true = 1
-console.log(Number(' '), Number(''), Number(null), Number(false)) // 0으로 casting되는 것들
+console.log(Number('1'), Number(true))
+//0으로 리턴됨
+console.log(Number(' '), Number(''), Number(null), Number(false))
 console.log(Number('a'), Number(undefined), Number(NaN))
 
-console.log(Boolean(-1), Boolean('a'), Boolean('0'), Boolean(' ')) //값이 있으니까 true
+//값이 존재하기때문에 true
+console.log(Boolean(-1), Boolean('a'), Boolean('0'), Boolean(' '))
+//false
 console.log(Boolean(0), Boolean(''), Boolean(null), Boolean(undefined), Boolean(NaN))

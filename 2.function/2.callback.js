@@ -1,9 +1,9 @@
 function sayOdd(num) {
-    console.log(`${num} is an numver.`)
+    console.log(`${num} is an number.`)
 }
 
 function sayEven(num) {
-    console.log(`${num} is an even number`)
+    console.log(`${num} is an even number.`)
 }
 
 function lookNum(fn1, fn2) {
@@ -15,7 +15,7 @@ function lookNum(fn1, fn2) {
 lookNum(sayOdd, sayEven)
 
 function sayOdd2(num){
-    console.log(`${num}은 홀수입니다.`)
+    console.log(`${num}은 홀수 입니다.`)
 }
 
 function sayEven2(num) {

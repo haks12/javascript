@@ -65,3 +65,4 @@ user = undefined
 user = {}
 //user.greet() // TypeError: user.greet is not a function
 user.greet?.() // undefined 출력 greet이 없으면 undefined
+console.log(user.greet?.()) // undefined 출력

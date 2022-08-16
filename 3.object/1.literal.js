@@ -1,7 +1,7 @@
 let user = {
     name: 'france',//key는 string이거나 symbol이다.
     ager : 70//value는 아무타입이나 가능
-}//할당연산자 오른쪽에 블럭만들면 object를 나타내는 문법이며 key와, value로 나타낸다.
+}//할당연산자 오른쪽에 블럭만들면 object를 나타내는 문법이며, key와 value로 나타낸다.
 
 user = {
     name: {

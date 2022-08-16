@@ -37,7 +37,7 @@ console.log(d)
 
 //비교연산자
 console.log()
-console.log('2' > 1, '01' == 1, false == 0, '' == false)
+console.log('2' > 1, '01' == 1, false == 0, '' == false)//타입이 다르면 넘버로 통일
 console.log(true > 1)
 
 // equivalent //true    false

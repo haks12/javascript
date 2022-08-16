@@ -3,7 +3,7 @@
 // 
 
 /** variable */
-let user //user변수선언
+let user //user변수선언 문자로 시작
 let user2
 //let 2user 
 let _user

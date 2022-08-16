@@ -34,7 +34,7 @@ let chef2 = function(food) {
 }
 
 let waiter = function(food, chef) {
-    return chef(food)
+    return chef(food)//chef 확장성 확보
 }
 
 console.log(waiter('짜장면', chef1),

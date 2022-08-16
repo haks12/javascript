@@ -7,7 +7,7 @@ let a = 1
 
 {
     let a = 2
-    console.log(a)
+    console.log(a)//local에 있는ㄴ a객체
 }
 
 console.log(a)

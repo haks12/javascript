@@ -13,4 +13,4 @@ setTimeout(greet, 2000, 'hello', 'knox')
 
 //
 let timeId = setTimeout(() => console.log('hoo'), 3000)
-clearTimeout(timeId)
+clearTimeout(timeId)//15에서 줄세웠다가 16에서 빼버림. 실행안됨.

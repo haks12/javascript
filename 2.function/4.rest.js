@@ -34,7 +34,7 @@ console.log(Math.max(1, 2, 3))
 
 let arr = [1, 2, 3]
 console.log(Math.max(arr))
-console.log(Math.max(...arr))
+console.log(Math.max(...arr))//spread는 모아져있는걸 끊어준다.
 
 let arr2 = [4, 5, 6]
 console.log(...arr, ...arr2)

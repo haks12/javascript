@@ -14,27 +14,22 @@ console.log(waiter('짜장면', chef1),
             waiter('짬뽕', chef2))
 */
 
-function Food(name) {
+function Food(taste, name) { // 생성자의 para에는 개체속성(구분기준) 기재
+    this.taste = taste    
     this.name = name
 }
 
-function Chef1() {
-    this.cook = '매운' => new Food(foodName)
+function Chef(taste) {
+    this.cook = foodName = new Food(taste, foodName)
 }
 
-function Chef2() {
-    this.cook = '달콤한' => new Food(foodName)
+function Waiter() {
+    this.order = (foodName, chef) => chef.cook(foodName)
 }
 
-function Menu() {
-    this.show = food => console.log(food)
-}
+let Chef1 = new Chef('달콤한')
+let Chef2 = new Chef('매운')
+let waiter = new Waiter()
 
-const food = new Food()
-const chef1 = new Chef1()
-const chef2 = new Chef2()
-const menu = new Menu()
-
-chef1.cook(menu.show('짜장면'))
-chef2.cook(menu.show('짜장면'))
-chef2.cook(menu.show('짬뽕'))
+waiter.order('짜장면', chef1)
+waiter.order('짜장면', chef2)

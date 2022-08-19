@@ -12,7 +12,7 @@ user = {
     age: 13,
     interests: ['music', 'movie'],
     sing: () => console.log('lala')
-}// 이 user는 4개의 entry(속성)을 갖고있다. property다.
+}// 이 user는 4개의 entry(속성)을 갖고있다. property다. 
 
 console.log(user.name)
 console.log(user.name.first)

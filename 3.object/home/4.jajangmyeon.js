@@ -1,7 +1,5 @@
 /* 과제:
 ~ 를 객체지향으로 refactoring 하라.
-*/
-/*
 let chef1 = food => `달콤한 ${food}.\n`
 
 let chef2 = food => `매운 ${food}.\n`

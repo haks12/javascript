@@ -12,7 +12,7 @@ let rabbit = new Rabbit('black')
 console.log(rabbit.isAlive)
 
 //
-Rabbit.prototype = animal // Rabbit이라는 생성자의 부모로 animal
+Rabbit.prototype = animal // Rabbit의 prototype에 anmimal 할당, Rabbit이라는 생성자의 부모로 animal
 console.log(Rabbit.prototype) // Rabbit의 원형 animal 출력
 
 rabbit = new Rabbit('white')
@@ -35,4 +35,4 @@ let duck2 = new Duck('duck2')
 console.log(duck2.__proto__ == duck.__proto__) // true
 
 let duck3 = new duck.__proto__.constructor('duck')
-duck3 = new duck.constructor('duck') // proto type으로
+duck3 = new duck.constructor('duck') // new duck으로 개체생성, proto type으로

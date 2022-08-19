@@ -7,12 +7,12 @@ console.log(obj.__proto_ == Object.prototype) // false
 obj = new Object()
 console.log(Object.__proto__)
 console.log(obj.__proto__)
-console.log(Object.prototype.__proto__) // null
+console.log(Object.prototype.__proto__) // Object의 prototype의 proto는 null 이다.
 
-console.log(obj.toString()) //[object Object]
+console.log(obj.toString()) // toString이용해서 [object Object]
 
 //
-let arr1 = [1, 2]
+let arr1 = [1, 2] // 16번째를 간략하게 쓴 것
 let arr2 = new Array(1, 2)
 console.log(arr1.__proto__ == arr2.__proto__) // true
 console.log(arr1.__proto__ == Array.prototype) // true

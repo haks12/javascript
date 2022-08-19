@@ -28,4 +28,7 @@ setTimeout(fn, 200)
 
 console.log(fn == user.greet) // false출력
 
-//bind는 주어function을  return 한다.
+// bind는 주어function을  return 한다.
+// bind와 call의 공통점 : this변수안에 para를 집어넣는다.
+// bind : return
+// call : call

@@ -19,7 +19,7 @@ user2.greet()
 let name = 'morpheus'
 
 function greet() {
-    console.log(`I am ${this.name}.`)
+    console.log(`I am ${this.name}.`) //function에서 this변수를 사용할 때, 주어객체가 들어간다.
 }
 
 greet() // I am undefined.출력

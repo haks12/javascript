@@ -7,7 +7,7 @@ console.log(date1 - date2) // 출력단위 : 초
 let user = {
     name: 'amanda',
     age: 20,
-    [Symbol.toPrimitive](hint) { // hint는 변수, 변수는 datatype이 없다.
+    [Symbol.toPrimitive](hint) { // hint는 변수, 변수는 datatype 이 없다.
         return hint == 'string' ? this.name : this.age
     }
 }

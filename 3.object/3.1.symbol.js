@@ -4,7 +4,7 @@ let id2 = Symbol('id')
 
 console.log(id, id1, id2)
 
-console.log(id1 == id2) // Q: id1 == id2 => id1과 id2는 같을까? A: False
+console.log(id1 == id2) // Q: id1 == id2 => id1과 id2는 같을까? A: false
 
 console.log(id.toString())
 console.log(typeof id)
@@ -21,7 +21,7 @@ user[userId] = 2 // Symbol type
 
 console.log(user)
 
-//과제: user 객체를 itertaing 해서, key 들을  출력하라.
+//과제: user 객체를 itertaing 해서, key 들을 출력하라.
 for(let key in user) console.log(key)
 
 console.log(Object.keys(user))

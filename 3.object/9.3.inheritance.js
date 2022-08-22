@@ -4,9 +4,9 @@ let animal = {
 
 animal = new Object()
 animal.name = 'animal'
+//과제: 토끼를 object literal및 생성자로 만들어라.
+//      토끼는 age = 3 property를 갖고있다.
 
-//과제 : 토끼를 object literal 및 생성자로 만들어라.
-//       토끼를 age = 3 property 를 갖고 있다.
 let rabbit = {
     age: 3
 }
@@ -19,9 +19,9 @@ console.log(rabbit.__proto__)
 
 console.log(animal.name, rabbit.age)
 
-rabbit.__proto__ = animal
+rabbit.__proto__ = animal // 상속관계 rabbit은 animal이다
 console.log(rabbit.__proto__)
-console.log(rabbit.name, rabbit.age) // A is a B. Rabbit은 animal이다.
+console.log(rabbit.name, rabbit.age)
 
 //
 animal = {
@@ -41,15 +41,14 @@ let user = {
     name: 'user'
 }
 
-let administrater = {
+let administrator = {
     __proto__: user
 }
 
-console.log(administrator.name) // user 출력
+console.log(administrator.name) //user
 
-administerator.name = 'jonadan'
-console.log(administrator.name) // jonadan 출력
-
+administrator.name = 'jonadan'
+console.log(administrator.name) // jonadan
 
 //
 animal = {
@@ -70,20 +69,24 @@ let lion = {
     __proto__: animal
 }
 
-animal.eat() // animal eat.
-rabbit.eat() // rabbit eat.
-lion.eat() // lion eat.
+animal.eat() // animal eat
+rabbit.eat() //rabbit eat
+lion.eat() //lion eat
 
 //
 console.log(Object.keys(rabbit))
 
-// 과제: rabbit 의 key 들을 iterating 해서 출력하라.
-for(let key in rabbit)
+//과제 rabbit의 key들을 iterating해서 출력하라.
+for(let key in rabbit){
     console.log(key)
+}
 
-for(let key in rabbit) {
+for(let key in rabbit){
     let isOwn = rabbit.hasOwnProperty(key)
-    if(isOwn) console.log`child's key: ${key}`
-    else console.log`parant's key: ${key}`
+    if(isOwn) {
+        msg = (`child's key: ${key}`)
+    }else{
+        msg = (`parent's key: ${key}`)
+    }
     console.log(msg)
 }

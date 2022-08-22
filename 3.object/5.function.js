@@ -5,7 +5,7 @@ function sayHi(myName, ...jobs) {
 sayHi('john')
 
 console.log(typeof sayHi) // function 출력
-console.log(sayHi.name)
+console.log(sayHi.name) // (객체.function)
 console.log(sayHi.length) // last para는 제하고 계산한다.
 
 //

@@ -45,3 +45,16 @@ console.log(article1 + '')
 //
 console.log(article1.publiser) // static변수는 class에 있지, 변수에 있는게 아니다.
 console.log(article1.publiser. article1.address, article1.compare) // undefined : 46이유동일
+console.log(Article.title, Article.viewCnt)
+console.log(Object.keys(Article1))
+console.log(Article.prototype)
+console.log(Object,keys(article1))
+
+//
+let articles = [article1, article2]
+console.log(articles)
+
+articles.sort(Article.compare)
+Article.compare = (a, b) => b = a
+articles.sort(Article.compare)
+console.log(articles)

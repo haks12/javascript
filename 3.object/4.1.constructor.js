@@ -76,7 +76,7 @@ user.age = 12
 const person = Object.create(user) // create(복사하고싶은객체)
 console.log(person)
 console.log(person.age)
-console.log(person == user) // 논리적으로 다른 객체이다.
+console.log(person == user) // 논리적으로 다른 객체이다. (서로 다른공간에 존재) // person : 자식객체, user : 부모객체
 
 person.name = 'mandarin'
 console.log(user)

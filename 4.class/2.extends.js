@@ -10,20 +10,27 @@ class Animal {
 
     stop() {
         this.speed = 0
-        console.log(this.name, ' stop.')
+        console.log(this.name, 'stop.')
     }
 }
 
 let animal = new Animal('animal')
 console.log(animal)
 
-animal.run(10)
-console.log(animal)
+animal.run(10) // animal 10 run.
+console.log(animal) // Aniaml {name: 'animal', speed: 10}
+
 animal.stop()
-console.log(animal)
+console.log(animal) // Animal {name: 'animal', speed: 0}
 
 //
-class Duck extends Animal {
+class Rabbit extends Animal {
+    /*
+    constructor(...args) {
+        super(...args)
+    }
+    */
+
     run(speed) {
         this.speed = speed / 10
         console.log(this.name, this.speed, 'run.')
@@ -34,12 +41,16 @@ class Duck extends Animal {
     }
 }
 
-let duck = new Duck('duck')
-console.log(duck)
+let rabbit = new Rabbit
+console.log(rabbit)
 
-duck.run(10)
-duck.stop()
-duck.hide()
+rabbit = new Rabbit('rabbit')
+console.log(rabbit)
+
+console.log(rabbit.name)
+rabbit.run(100)
+rabbit.stop()
+rabbit.hide()
 
 //
 class Rabbit extends Animal {

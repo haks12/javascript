@@ -30,7 +30,7 @@ console.log(Duck.prototype.constructor == Duck) // true
 let duck = new Duck('duck')
 console.log(duck.__proto__)
 console.log(duck.__proto__.constructor)
-
+ 
 let duck2 = new Duck('duck2')
 console.log(duck2.__proto__ == duck.__proto__) // true
 

@@ -18,9 +18,10 @@ let user2 = {
         return this.age
     }
 }
+
 console.log(`${user}`) // `${user}`의 datatype은 String이다.
-console.log(user > user2) // 20 > 38 : false 출력
-console.log(user + 50) // 서로 타입이 다르면 넘버로 변환
+console.log(user > user2) // 20 > 38 : false 출력 
+console.log(user + 50) // 서로 타입이 다르면 넘버로 변환 ( + 연산자에서 hint는 default)
 console.log(user2 + 50)
 
 //

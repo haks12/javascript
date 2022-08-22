@@ -17,7 +17,7 @@ let user = {
 
 let userId = Symbol('userId')
 user.userId = 1 // userId property 추가 // String type
-user[userId] = 2 // Symbol type
+user[userId] = 2 // Symbol type /// 19번째 줄과 다른 property다.
 
 console.log(user)
 
@@ -35,7 +35,7 @@ let key = Symbol.keyFor(id1)
 console.log(key,typeof key)
 
 //
-id1 = Symbol.for('name') // global symbol
+id1 = Symbol.for('name') // global symbol : for을 이용
 id2 = Symbol('name') // local symbol
 console.log(id1 == id2)
 

@@ -43,7 +43,7 @@ function Mom() {
 }
 
 function Child() {
-    this.eat = food => console.log(food)
+    this.eat = food => console.log(food) // 주의) console.log 가 작동하는것 아니다. 테스트목적일 뿐
 }
 
 const mom = new Mom()

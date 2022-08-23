@@ -18,7 +18,7 @@ class Article {
         return this.viewCnt
     }
 
-    [Symbol.toPrimitive](hint) { // hint는 3가지 : String, number, deault
+    [Symbol.toPrimitive](hint) {
         return hint == 'number' ? this.viewCnt : this.title
     }
 }
@@ -26,7 +26,7 @@ class Article {
 console.log(Article.publiser)
 
 //
-Article. address = 'seoul'
+Article.address = 'seoul'
 console.log(Article.address)
 
 Article.getPrice = () => 2000
@@ -34,27 +34,41 @@ console.log(Article.getPrice())
 
 //
 let article1 = new Article('java', 100)
-let article2 = new Article('javascript', 10)
+let article2 = new Article('Javascript', 10)
 
-console.log(Article.compare(article1,article2))
+console.log(Article.compare(article1, article2))
 
-//
 console.log(`${article1}`)
 console.log(article1 + '')
 
 //
-console.log(article1.publiser) // static변수는 class에 있지, 변수에 있는게 아니다.
-console.log(article1.publiser. article1.address, article1.compare) // undefined : 46이유동일
+console.log(article1.publiser, article1.address, article1.compare)
 console.log(Article.title, Article.viewCnt)
-console.log(Object.keys(Article1))
+console.log(Object.keys(article1))
+
+//keys는 static method는 불러올 수 없다 (compare를 불러올 수 없다.)
+console.log(Object.keys(Article)) //['publiser', 'address', 'getPrice']
+for(let key in Article) console.log(key)
+/*
+publiser
+address
+getPrice
+*/
+
+console.log(Object.keys(Article)) //(3) ['publiser', 'address', 'getPrice']
 console.log(Article.prototype)
-console.log(Object,keys(article1))
+//{constructor: ƒ, toString: ƒ, valueOf: ƒ, Symbol(Symbol.toPrimitive): ƒ}
+console.log(Object.keys(article1)) //(2) ['title', 'viewCnt']
+
 
 //
+
 let articles = [article1, article2]
 console.log(articles)
 
 articles.sort(Article.compare)
-Article.compare = (a, b) => b = a
+console.log(articles)
+
+Article.compare = (a, b) => b - a
 articles.sort(Article.compare)
 console.log(articles)

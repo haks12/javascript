@@ -32,7 +32,7 @@ arr.push(2)
 arr.push(3)
 
 console.log(arr)
-console.log(arr.pop()) // 제일 꼭대기에 있는 값을 얻어낸다.
+console.log(arr.pop()) // 후입선출 Lifo
 console.log(arr)
 
 //
@@ -42,12 +42,12 @@ arr.push(2)
 arr.push(3)
 
 console.log(arr)
-console.log(arr.shift())
+console.log(arr.shift()) // 선입선출 Fifo
 console.log(arr)
 
 //
 a = [0, 1, 2]
-b = a.slice(1)
+b = a.slice(1) // slice(1) 1 index부터 1포함
 console.log(b, a)
 
 //
@@ -74,10 +74,10 @@ console.log(arr, s)
 console.log(s == arr) // true
 
 arr = [8, 11, 22, 34, 9]
-console.log(arr.sort()) // sort는 숫자 8, 11 등 으로 파악하는 것이 아니라, 문자String으로 인식한다.
+console.log(arr.sort()) // sort는 숫자 8, 11 등 으로 파악하는 것이 아니라, 문자String으로 취급한다.
 
-console.log(arr.sort((a, b) => a - b))
-console.log(arr.sort((a, b) => b - a)) // 숫자로 인식
+console.log(arr.sort((a, b) => a - b)) // 오름차순
+console.log(arr.sort((a, b) => b - a)) // 내림차순
 
 //
 arr = ['a', 'b', 'c']
@@ -85,7 +85,7 @@ arr = ['a', 'b', 'c']
 for(let i = 0; i < arr.length; i++)
     console.log(arr[i])
 
-for(let key in arr) console.log(key)
+for(let key in arr) console.log(key) // index 를 return
 
 // 과제: 원소를 출력하라.
 for(let key in arr) console.log(arr[key])

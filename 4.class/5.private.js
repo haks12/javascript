@@ -11,12 +11,12 @@ class CoffeeMachine {
 }
 
 console.log(CoffeeMachine)
-console.log(CoffeeMachine.prototype)
+console.log(CoffeeMachine.prototype) // {constructor: ƒ, waterAmount: <accessor>}
 
 let machine = new CoffeeMachine()
 console.log(machine)
 
 machine.waterAmount = 1
-console.log(machine.waterAmount)
+console.log(machine.waterAmount) // 102
 
 // machine.#waterAmount = 1 // SyntaxError

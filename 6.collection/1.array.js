@@ -15,7 +15,7 @@ console.log(arr[1])
 console.log(arr.length)
 
 //
-let matrix = [
+let matrix = [ // matrix는 행과 열의 수 가 같아야 한다.
     [1, 2],
     [3, 4]
 ] // 2행 2열
@@ -55,6 +55,9 @@ arr = [0, 7, 8, 5]
 arr.splice(1, 2, 1, 2, 3, 4)// 7, 8 자리에 1234 를 삽입
 console.log(arr)
 
+// slice 는 return 을 하고,
+// splice 는 return 하지 않는다.
+
 //
 arr = ['a', 'b', 'c']
 console.log(arr.indexOf('b')) // 1
@@ -91,5 +94,61 @@ for(let key in arr) console.log(key) // index 를 return
 for(let key in arr) console.log(arr[key])
 for(let val of arr) console.log(val)
 
-// slice 는 return 을 하고,
-// splice 는 return 하지 않는다.
+//
+function print(e) {
+
+}
+
+function print2(e, i) {
+    console.log(`[${i}]: ${e}`)
+}
+
+function print3(e, i, arr) {
+    arr[i] = e.toUpperCase()
+}
+
+arr = ['a', 'b']
+
+arr.forEach(print)
+
+arr.forEach(print2)
+console.log(arr)
+
+arr.forEach(print3)
+console.log(arr)
+
+//
+arr = [1, 2, 3]
+let arr2 = arr.map(e => e * 2)
+console.log(arr, arr2)
+
+//
+let group = {
+    title: 'art',
+    students: ['winston', 'cal', 'maritha'],
+    list() {
+        this.students.forEach(studentName =>
+            console.log(this.title, ':', studentName))
+    }
+}
+
+group.list()
+
+//
+arr = ['hello', 'world', 2]
+let greeting = arr.join()
+console.log(greeting) // join : , 를 구분자로 이용, 각각의 단어를 불러온다.
+console.log(typeof greeting)
+
+console.log(arr.join('/')) // '/'를 구분자로
+// 과제: arr.join()에서  'helloworld2'를 return 하라.
+console.log(arr.join(''))
+
+//
+arr = [1, 2, 3]
+str = arr.toString()
+console.log(str, '/', typeof str)
+
+//
+str = JSON.stringify(arr)
+console.log(str, '/', typeof str)
